@@ -7,8 +7,12 @@
     "dev": "webpack-dev-server --progress --config config/webpack.dev.config.js",
     "build": "webpack --progress --config config/webpack.prod.config.js",
     "lint": "eslint --ext .js --ext .jsx src/",
-    "start": "npm run dev",
-    "precommit": "lint-staged"
+    "start": "npm run dev" 
+  },
+  "husky":{
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "src/**/*.js": ["eslint --fix", "git add"]
