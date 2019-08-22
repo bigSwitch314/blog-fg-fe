@@ -28,7 +28,7 @@ class Home extends React.Component {
     console.log('format---------', a)
     const b = getTime(new Date(2012, 1, 29, 11, 45, 5, 123))
     console.log('getTime----------------------', b)
-    // function2()
+    function2()
   }
 
   render() {

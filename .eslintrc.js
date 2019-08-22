@@ -45,6 +45,8 @@ module.exports = {
     "prefer-const": 1,  // 更喜欢用const
     "comma-dangle": [1, "always-multiline"],  // 要求或禁止末尾逗号
     "comma-spacing": [1, { "before": false, "after": true }],  // 强制在逗号前后使用一致的空格
+    "no-extra-boolean-cast": "error", // 禁止不必要的布尔转换
+    "no-extra-semi": "error", // 禁止不必要的分号
   },
   "env": {
     "es6": true,
