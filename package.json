@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --config config/webpack.dev.config.js",
     "build": "webpack --progress --config config/webpack.prod.config.js",
-    "lint": "eslint --ext .js --ext .jsx src/",
+    "lint": "eslint --ext .js,.jsx src/",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build",
     "start": "npm run dev" 
   },
   "husky":{
