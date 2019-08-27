@@ -12,11 +12,11 @@
   },
   "husky":{
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --debug"
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": ["eslint --fix -c=./config/.eslintrc.js", "git add"]
+    "src/**/*.{js,jsx}": ["eslint --fix", "git add"]
   },
   "author": "",
   "license": "ISC",
