@@ -16,7 +16,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": ["eslint --fix", "git add"]
+    "src/**/*.{js,jsx}": ["eslint --fix -c=./config/.eslintrc.js", "git add"]
   },
   "author": "",
   "license": "ISC",

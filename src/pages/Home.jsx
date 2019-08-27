@@ -36,7 +36,7 @@ class Home extends React.Component {
     return (
       <div>
         <h3>hello Webpack2228888822!</h3>
-        <div className="test">
+        <div className="">
           luoqiang
         </div>
         <Button type="primary">确定2</Button>
