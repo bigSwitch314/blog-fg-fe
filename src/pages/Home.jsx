@@ -4,6 +4,7 @@ import { Button } from 'antd'
 import { chunk, compact } from 'lodash'
 import { format, getTime } from 'date-fns'
 import './Home.less'
+import './Test.css'
 
 class Home extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Home extends React.Component {
     const b = getTime(new Date(2012, 1, 29, 11, 45, 5, 123))
     console.log('getTime----------------------', b)
     // function3822()
-    const aa2=0
+    // const aa3q = 0
   }
 
   render() {

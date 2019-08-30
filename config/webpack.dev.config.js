@@ -7,6 +7,7 @@ const baseWebpackConfig = require('./webpack.base.config.js')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
@@ -39,6 +40,13 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new webpack.HotModuleReplacementPlugin(), // 添加 hmr plugin
     new ErrorOverlayPlugin(), // 编译错误页面美化显示
+    new StyleLintPlugin({ // css less语法规则检测
+      context: 'src',
+      configFile: path.resolve(__dirname, '../stylelint.config.js'),
+      files: ['**/*.less', '**/*.css'],
+      failOnError: false,
+      quiet: true,
+    }),
   ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {

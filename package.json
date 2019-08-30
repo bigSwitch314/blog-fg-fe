@@ -6,17 +6,30 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --config config/webpack.dev.config.js",
     "build": "webpack --progress --config config/webpack.prod.config.js",
-    "lint": "eslint --ext .js,.jsx src/",
-    "analyz": "NODE_ENV=production npm_config_report=true npm run build",
-    "start": "npm run dev" 
+    "lint": "eslint --ext .js,.jsx src/ -c=./config/.eslintrc.js",
+    "lint:css": "stylelint --fix src/**/*.css --config=./config/stylelint.config.js",
+    "lint:less": "stylelint --fix src/**/*.less, src/**/*.less --config=./config/stylelint.config.js",
+    "analyzer": "NODE_ENV=production npm_config_report=true npm run build",
+    "start": "npm run dev"
   },
-  "husky":{
+  "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --debug"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": ["eslint --fix", "git add"]
+    "src/**/*.{jsx, js}": [
+      "eslint --fix -c=./config/.eslintrc.js",
+      "git add"
+    ],
+    "src/**/*.css": [
+      "stylelint --fix src/**/*.css --config=./config/stylelint.config.js",
+      "git add"
+    ],
+    "src/**/*.less": [
+      "stylelint --fix src/**/*.less --config=./config/stylelint.config.js",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -54,6 +67,8 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
     "terser-webpack-plugin": "^1.4.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.36.1",
@@ -68,6 +83,7 @@
     "date-fns": "^1.30.1",
     "lodash": "^4.17.15",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "stylelint-webpack-plugin": "^0.10.5"
   }
 }
