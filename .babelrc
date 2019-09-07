@@ -24,6 +24,7 @@
       },
     ],
     ["import", { "libraryName": "antd", "style": "css" }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
   ],
 }
 

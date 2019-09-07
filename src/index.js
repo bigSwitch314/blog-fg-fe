@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'antd/dist/antd.css'
+import Router from './router'
+// import { Provider } from 'react-redux'
+// import { LocaleProvider } from 'antd'
+// import zhCN from 'antd/lib/locale-provider/zh_CN'
 
-import Home from '@pages/Home'
-
-
-ReactDOM.render(<Home />, document.getElementById('root'))
+ReactDOM.render(
+  <Router />,
+  document.getElementById('root')
+)

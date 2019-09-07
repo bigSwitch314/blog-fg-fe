@@ -1,10 +1,29 @@
 import React from 'react'
-import { Button } from 'antd'
-
+// import { Button } from 'antd'
 import { chunk, compact } from 'lodash'
 import { format, getTime } from 'date-fns'
+import RcViewer from '@hanyk/rc-viewer'
+
+import img01 from '@assets/image/img01.jpg'
 import './Home.less'
 import './Test.css'
+
+const rcViewerOptions={
+  title: 0,
+  toolbar: {
+    zoomIn: 1,
+    zoomOut: 1,
+    oneToOne: 0,
+    reset: 0,
+    prev: 0,
+    play: 0,
+    next: 0,
+    rotateLeft: 1,
+    rotateRight: 1,
+    flipHorizontal: 1,
+    flipVertical: 1},
+}
+
 
 class Home extends React.Component {
   constructor(props) {
@@ -36,11 +55,10 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h3>hello Webpack2228888822!</h3>
-        <div className="">
-          luoqiang
-        </div>
-        <Button type="primary">确定2</Button>
+        <h3>图片缩放测试</h3>
+        <RcViewer options={rcViewerOptions}>
+          <img src={img01} alt="11" height="100px"/>
+        </RcViewer>
       </div>
     )
   }

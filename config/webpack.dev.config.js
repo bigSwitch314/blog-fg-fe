@@ -50,7 +50,7 @@ module.exports = merge(baseWebpackConfig, {
   ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    port: '8080',
+    port: '8090',
     contentBase: path.join(__dirname, '../public'),
     compress: false,
     historyApiFallback: true,
