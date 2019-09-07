@@ -21,14 +21,6 @@ class BasicLayout extends React.Component {
     });
   }
 
-  handleFocus() {
-    const search = document.getElementById('search')
-    let width = search.attributes.id.ownerElement.clientWidth
-    width += 20
-    console.log(width)
-    search.style.width = width + 'px'
-  }
-
   render() {
 
     return (
@@ -55,9 +47,6 @@ class BasicLayout extends React.Component {
             </SubMenu>
           </Menu>
           <Search
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            id="search"
             placeholder=""
             onSearch={value => console.log(value)}
             className="search"
