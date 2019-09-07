@@ -21,6 +21,14 @@ class BasicLayout extends React.Component {
     });
   }
 
+  handleFocus() {
+    const search = document.getElementById('search')
+    let width = search.attributes.id.ownerElement.clientWidth
+    width += 20
+    console.log(width)
+    search.style.width = width + 'px'
+  }
+
   render() {
 
     return (
@@ -43,13 +51,16 @@ class BasicLayout extends React.Component {
             >
               <Menu.Item key="81">后台</Menu.Item>
               <Menu.Item key="52">专栏</Menu.Item>
-              <Menu.Item key="52">工具</Menu.Item>
+              <Menu.Item key="53">工具</Menu.Item>
             </SubMenu>
           </Menu>
           <Search
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            id="search"
             placeholder=""
             onSearch={value => console.log(value)}
-            style={{ width: 150, height: 30, margin: 6 }}
+            className="search"
           />
         </Header>
 
