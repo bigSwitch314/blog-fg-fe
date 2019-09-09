@@ -36,7 +36,13 @@ class BasicLayout extends React.Component {
     return (
       <Layout className="basic-layout">
         <Header className="basic-layout-header">
-          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+          <i className="iconfont iconlogo logo" />
+          <Menu
+            onClick={this.handleClick}
+            selectedKeys={[this.state.current]}
+            mode="horizontal"
+            className="menu"
+          >
             <Menu.Item key="1">
               <Link to='/home'>首页</Link>
             </Menu.Item>
@@ -55,9 +61,6 @@ class BasicLayout extends React.Component {
             <Menu.Item key="6">
               <Link to='/openSource'>开源项目</Link>
             </Menu.Item>
-            <Menu.Item key="7">
-              <Link to='/about'>关于</Link>
-            </Menu.Item>
             <SubMenu
               title={
                 <span className="submenu-title-wrapper">
@@ -65,7 +68,9 @@ class BasicLayout extends React.Component {
                 </span>
               }
             >
-              <Menu.Item key="52">专栏</Menu.Item>
+              <Menu.Item key="7">
+                <Link to='/about'>关于</Link>
+              </Menu.Item>
               <Menu.Item key="53">工具</Menu.Item>
             </SubMenu>
           </Menu>
