@@ -2,7 +2,7 @@ import React from 'react'
 // import { Icon, Avatar } from 'antd'
 
 
-class LoginLog extends React.Component {
+class About extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -24,9 +24,9 @@ class LoginLog extends React.Component {
 
   render() {
     return (
-      <div>原创文章</div>
+      <div>转载</div>
     )
   }
 }
 
-export default LoginLog
+export default About

@@ -2,9 +2,6 @@ import React from 'react'
 // import { Button } from 'antd'
 import { chunk, compact } from 'lodash'
 import { format, getTime } from 'date-fns'
-import RcViewer from '@hanyk/rc-viewer'
-
-import img01 from '@assets/image/img01.jpg'
 import './Home.less'
 import './Test.css'
 
@@ -56,9 +53,6 @@ class Home extends React.Component {
     return (
       <div>
         <h3>图片缩放测试</h3>
-        <RcViewer options={rcViewerOptions}>
-          <img src={img01} alt="11" height="100px"/>
-        </RcViewer>
       </div>
     )
   }

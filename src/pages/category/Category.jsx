@@ -24,7 +24,7 @@ class LoginLog extends React.Component {
 
   render() {
     return (
-      <div>分类管理</div>
+      <div>分类</div>
     )
   }
 }
