@@ -2,6 +2,8 @@ import React from 'react'
 import {Route, Link, Switch } from 'react-router-dom'
 import { Layout, Menu, Input, Icon } from 'antd'
 
+import MyFooter from './footer/Footer'
+
 import Home from '@pages/home/Home.jsx'
 import Category from '@pages/category/Category.jsx'
 import Label from '@pages/label/Label.jsx'
@@ -36,7 +38,7 @@ class BasicLayout extends React.Component {
     return (
       <Layout className="basic-layout">
         <Header className="basic-layout-header">
-          <i className="iconfont iconlogo logo" />
+          <i className="iconfont icon-logo logo" />
           <Menu
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
@@ -130,7 +132,7 @@ class BasicLayout extends React.Component {
           </div>
         </Content>
         <Footer className="basic-layout-footer">
-          Footer
+          <MyFooter/>
         </Footer>
       </Layout>
 
